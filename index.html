@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Kumar Reddy Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #dad6d2;
+        }
+        .container {
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 800px;
+        }
+        .left-section {
+            background-color: #f9f5f2;
+            padding: 20px;
+            text-align: center;
+            width: 40%;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto;
+            /* background-color: #ccc; */
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        .title {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #007bff;
+            margin: 10px auto;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #666;
+            font-size: 20px;
+        }
+        .right-section {
+            padding: 40px;
+            width: 60%;
+        }
+        .greeting {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn-secondary {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="profile-pic"></div>
+            <img src="C:\Users\saiku\OneDrive\Pictures\reddy.jpeg" alt="Profile Picture" class="profile-pic">
+            <div class="name">Sai Kumar</div>
+            <div class="title">Frontend Developer</div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/?hl=en" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">IN</a>
+                <a href="https://x.com/home" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">X</a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">LN</a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">GMAIL</a>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="greeting" style="color: #a33267; font-style: italic ;; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">Hello!</div>
+            <div class="subtitle">I am Sai Kumar Reddy</div>
+            <div class="buttons">
+                <a href="resume.pdf" class="btn btn-primary" target="_blank">Resume</a>
+                <br>
+                <a href="https://gradlink.live/" target="_blank" class="btn btn-secondary">Project</a>
+            </div>
+                <div class="description">
+                    I am Sai Kumar Reddy Appidi, a B.Tech 2nd-year student at Vignan University and a frontend development intern at Cognifyz Technologies.
+                <br><br>
+                I’m Passionate about web development and UI/UX design, I specialize in HTML, CSS, JavaScript, and React.I love exploring new technologies and building interactive, responsive websites. Always eager to learn and grow, I look forward to exciting opportunities in frontend development.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
