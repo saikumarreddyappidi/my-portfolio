@@ -14,7 +14,81 @@
             align-items: center;
             height: 100vh;
             background-color: #dad6d2;
+            overflow: hidden;
         }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 123, 255, 0.2);
+            animation: float 6s infinite ease-in-out;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .circle.small {
+            width: 50px;
+            height: 50px;
+            top: 10%;
+            left: 20%;
+        }
+
+        .circle.medium {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 70%;
+        }
+
+        .circle.large {
+            width: 150px;
+            height: 150px;
+            top: 80%;
+            left: 30%;
+        }
+
+        /* Water drop-like graphics */
+        .water-drop {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background: rgba(163, 50, 103, 0.3);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: drop 4s infinite ease-in-out;
+        }
+
+        .water-drop.one {
+            top: 15%;
+            left: 40%;
+        }
+
+        .water-drop.two {
+            top: 60%;
+            left: 80%;
+        }
+
+        .water-drop.three {
+            top: 70%;
+            left: 10%;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes drop {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
         .container {
             display: flex;
             background-color: #fff;
@@ -22,30 +96,37 @@
             border-radius: 10px;
             overflow: hidden;
             width: 800px;
+            position: relative;
+            z-index: 1;
         }
+
+        /* Other styles remain unchanged */
         .left-section {
             background-color: #f9f5f2;
             padding: 20px;
             text-align: center;
             width: 40%;
         }
+
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin: 0 auto;
-            /* background-color: #ccc; */
         }
+
         .name {
             font-size: 24px;
             font-weight: bold;
             margin: 10px 0 5px;
         }
+
         .title {
             font-size: 16px;
             color: #666;
             margin-bottom: 20px;
         }
+
         .title::after {
             content: '';
             display: block;
@@ -54,35 +135,42 @@
             background-color: #007bff;
             margin: 10px auto;
         }
+
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 10px;
         }
+
         .social-icons a {
             text-decoration: none;
             color: #666;
             font-size: 20px;
         }
+
         .right-section {
             padding: 40px;
             width: 60%;
         }
+
         .greeting {
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
         .subtitle {
             font-size: 18px;
             color: #666;
             margin-bottom: 20px;
         }
+
         .buttons {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
         }
+
         .btn {
             padding: 10px 20px;
             border: none;
@@ -90,50 +178,68 @@
             cursor: pointer;
             font-size: 14px;
         }
+
         .btn-primary {
             background-color: #007bff;
             color: #fff;
         }
+
         .btn-secondary {
             background-color: #007bff;
             color: #fff;
         }
+
         .description {
             font-size: 14px;
             color: #666;
             line-height: 1.5;
         }
     </style>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Decorative elements -->
+    <div class="circle small"></div>
+    <div class="circle medium"></div>
+    <div class="circle large"></div>
+    <div class="water-drop one"></div>
+    <div class="water-drop two"></div>
+    <div class="water-drop three"></div>
+
     <div class="container">
         <div class="left-section">
             <div class="profile-pic"></div>
             <img src="C:\Users\saiku\OneDrive\Pictures\reddy.jpeg" alt="Profile Picture" class="profile-pic">
-            <div class="name">Sai Kumar</div>
+            <div class="name" style="font-family: 'Georgia', serif; color: #161210; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  padding: 5px 10px; border-radius: 5px; display: inline-block;">Sai Kumar</div>
             <div class="title">Frontend Developer</div>
             <div class="social-icons">
-                <a href="https://www.instagram.com/?hl=en" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">IN</a>
-                <a href="https://x.com/home" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">X</a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">LN</a>
-                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" style="transition: color 0.3s;" onmouseover="this.style.color='#007bff';" onmouseout="this.style.color='#666';">GMAIL</a>
+                <a href="https://www.instagram.com/?hl=en" target="_blank">
+                    <img src="C:\Users\saiku\OneDrive - Vignan University\insta.jpg" alt="Instagram" style="width: 30px; height: 30px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';">
+                </a>
+                <a href="https://x.com/home" target="_blank">
+                    <img src="C:\Users\saiku\OneDrive - Vignan University\x.jpg" alt="X" style="width: 30px; height: 30px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';">
+                </a>
+                <a href="https://www.linkedin.com/feed/" target="_blank">
+                    <img src="C:\Users\saiku\OneDrive - Vignan University\link.jpg" alt="LinkedIn" style="width: 30px; height: 30px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';">
+                </a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                    <img src="C:\Users\saiku\OneDrive - Vignan University\gmail.png" alt="Gmail" style="width: 30px; height: 30px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';">
+                </a>
             </div>
         </div>
         <div class="right-section">
-            <div class="greeting" style="color: #a33267; font-style: italic ;; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">Hello!</div>
+            <div class="greeting" style="color: #a33267; font-style: italic; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">Hello!</div>
             <div class="subtitle">I am Sai Kumar Reddy</div>
             <div class="buttons">
                 <a href="resume.pdf" class="btn btn-primary" target="_blank">Resume</a>
                 <br>
                 <a href="https://gradlink.live/" target="_blank" class="btn btn-secondary">Project</a>
             </div>
-                <div class="description">
-                    I am Sai Kumar Reddy Appidi, a B.Tech 2nd-year student at Vignan University and a frontend development intern at Cognifyz Technologies.
+            <div class="description">
+                I am Sai Kumar Reddy Appidi, a B.Tech 2nd-year student at Vignan University and a frontend development intern at Cognifyz Technologies.
                 <br><br>
                 I’m Passionate about web development and UI/UX design, I specialize in HTML, CSS, JavaScript, and React.I love exploring new technologies and building interactive, responsive websites. Always eager to learn and grow, I look forward to exciting opportunities in frontend development.
             </div>
         </div>
     </div>
 </body>
-</html>
+</html></div></a>
